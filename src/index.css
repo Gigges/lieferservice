@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: #14171A;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +11,37 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.card {
+  display:inline-block;
+  color:black;
+   padding:10px;
+   background-color:#657786;
+  }
+
+.card-img-top {
+  width: 100%;
+  height: 15vw;
+  object-fit: cover;
+}
+
+.BrowserRouter {
+  background-color: #657786;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nav-links {
+  width: 40%;
+  display:flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
+
+.Button {
+  margin:auto;
+  width:200px
 }
