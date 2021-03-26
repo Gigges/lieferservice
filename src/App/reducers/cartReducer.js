@@ -4,11 +4,10 @@ import {addToCart} from '../actions/cartActions'
 
 const cartReducer= (state,action) => {
    
-    //INSIDE HOME COMPONENT
+     //handle add to cart action
         if(action.type === 'ADD_TO_CART'){
             let addedItem = state.items.find(item=> item.id === action.id)
-            
-            //check if the action id exists in the addedItems
+           
            let exists_item= state.addedItems.find(item=> action.id === item.id)
            if(exists_item)
            {  
@@ -21,7 +20,6 @@ const cartReducer= (state,action) => {
           }
            else{
               addedItem.quantity = 1;
-              //calculating the total
               let newTotal = state.total + addedItem.price 
               console.log(state.addedItems)
              
@@ -34,9 +32,7 @@ const cartReducer= (state,action) => {
               
           }
       }
-      else{
-          console.log(action)
-          console.log(state.addedItems)
+      else{ //oo action, return previous state
           return state
       }
     }

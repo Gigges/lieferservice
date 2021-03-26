@@ -1,6 +1,7 @@
 import React from 'react';
 import {Nav,Navbar} from 'react-bootstrap'
 
+
  const NavigationBar = (props)=>{
     return(
        <Navbar bg="dark" expand="lg">

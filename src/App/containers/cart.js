@@ -10,6 +10,7 @@ class Cart extends Component{
 
     render(){
          let ordered=[]
+         //display a Cart Entry for every added Item
         return (
             <>
             <ListGroup>
@@ -29,7 +30,6 @@ class Cart extends Component{
     }
       
 const mapStateToProps = (state)=>{
-   console.log("added items")
    console.log(state.addedItems)
         
     return{

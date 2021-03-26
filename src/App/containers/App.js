@@ -12,6 +12,7 @@ import store from "../store"
 
 class App extends React.Component {
   render() {return (
+    //Router for Navigation 
     <BrowserRouter>
     <div className="App">
       <NavigationBar/>

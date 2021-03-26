@@ -54,6 +54,7 @@ const initState = {
     total:0
 }
 
+//save store to local storage to survive reload/navigation
 function saveToLocalStorage(state) {
     try {
         const storedState = JSON.stringify(state);
@@ -62,6 +63,7 @@ function saveToLocalStorage(state) {
         console.log(e);
     }
 }
+//load previously saved state to store
 function loadFromLocalStorage(){
     console.log("load?")
     try{
@@ -75,9 +77,12 @@ function loadFromLocalStorage(){
 }
 
 const persistedState = loadFromLocalStorage();
+
+//create redux store, with saved state & redux devtools
 const store = createStore(cartReducer,persistedState,window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+
+//save store state to disk on every change
 store.subscribe((state) =>{
-    console.log("saved?")
     saveToLocalStorage(store.getState())
 }
 )

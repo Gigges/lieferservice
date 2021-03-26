@@ -20,10 +20,12 @@ class Meals extends React.Component {
         };
 
        
-
-        let items = this.props.items;
+        //get the added items from redux
+        let items = this.props.addedItems;
         return (
+            //return a Meal item for every item in the store
             <>
+            
                 {items.map((meal) => {
                     return <Meal key={meal.id} meal={meal} img={meal.image} onClick={() => {handleClick(meal.id) }} />
                 })}
@@ -38,9 +40,11 @@ class Meals extends React.Component {
 
 }
 
+
+//save store state into props
 const mapStateToProps = (state) => {
     return { 
-        items : state.items
+        addedItems : state.items
     };
 };
 

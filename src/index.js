@@ -7,7 +7,7 @@ import App from './App/containers/App.js';
 import store from './App/store';
 import {Router,Route,browserHistory } from 'react-router-redux'
 
-
+//main 
 render(
   <Provider store={store}>
     <App />
